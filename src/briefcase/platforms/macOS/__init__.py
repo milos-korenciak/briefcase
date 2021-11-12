@@ -178,6 +178,7 @@ class macOSPackageMixin:
             self.subprocess.run(
                 [
                     'codesign',
+                    '--timestamp',
                     '--sign', identity,
                     '--entitlements', os.fsdecode(entitlements),
                     '--deep', os.fsdecode(path),
